@@ -1,0 +1,42 @@
+<div class="cover-trip" style="background-image: url({{tripCreated.image.url}} )">
+
+    <h1>{{tripCreated.name}}</h1>
+    {{!-- <img src="{{tripCreated.image.url}}" /> --}}
+</div>
+<div>
+    {{!-- CREATE A PARTIAL --}}
+    <ul>
+        {{#each tripCreated.days}}
+        {{> dayCard this}}
+        {{/each}}
+        <li>{{#if creator}}
+            <a href='/trip/{{tripCreated._id}}/day/new'>Add a new day to your journey</a>
+            {{/if}}
+        </li>
+    </ul>
+</div>
+
+
+<div>
+    {{!-- Col droite --}}
+</div>
+
+
+{{#if creator}}
+<a href="/trip/{{tripCreated._id}}/delete">Delete this trip</a>
+<a href="/trip/{{tripCreated._id}}/edit">Edit this trip</a>
+
+{{else}}
+{{#if follower}}
+
+<a class="waves-effect waves-light btn-large unfollow"><i class="material-icons left icon">check</i>Unfollow?</a>
+
+{{else}}
+<a class="waves-effect waves-light btn-large follow"><i class="material-icons left icon">cloud</i>button</a>
+{{/if}}
+
+{{/if}}
+
+<input hidden class="target-user" value="{{currentUser._id}}">
+<input hidden class="target-trip" value="{{tripCreated._id}}">
+<input hidden class="target-follower" value="{{follower}}">

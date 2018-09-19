@@ -1,0 +1,54 @@
+{{#if resultArray }}
+<p>What do you want to do today ?</p>
+
+
+{{!-- trip created --}}
+<h2>My trip : </h2>
+<div class="row">
+
+    {{#each resultArray.tripCreated}}
+
+    {{> tripCard this }}
+
+
+    {{/each}}
+
+
+
+    <div class="col s3">
+        <div class="card small">
+            <div class="card-image">
+                <img src="../public/images/cover-home.jpg" style="height:100%">
+                <span class="card-title">Create a new trip</span>
+
+            </div>
+            <div class="card-content">
+                <a class="btn-floating halfway-fab waves-effect waves-light red redbutton" href="trip/create-trip"><i
+                        class="material-icons">add</i></a>
+                <p>No trip yet ? Next time your are going on a journey create it!.</p>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+{{!-- trip followed --}}
+<div id="tripFollowed" class="row">
+    <h2>Trip you are following : </h2>
+    <ul>
+        {{#each resultArray.tripFollowed}}
+        {{> tripCard this}}
+        {{resultArray.tripFollowed}}
+        {{/each}}
+    </ul>
+</div>
+
+{{else}}
+<h2> You need to be part of the create an account :)</h2>
+<p>If you already have an account just follow log in</p>
+<a href="/login">login</a> {{/if}}
+
+
+
+<div id="map"></div>

@@ -1,0 +1,32 @@
+<div class="container form z-depth-2">
+
+  <div class="header-form">
+    <h3> Sign Up </h3>
+  </div>
+
+  <form method="POST" action="/signup" enctype="multipart/form-data">
+    <label>
+      Mail:
+    </label>
+    <input type="text" name="mail">
+    <label>
+      Username:
+    </label>
+    <input type="text" name="username">
+    <br>
+    <label>
+      Password:
+    </label>
+    <input type="password" name="password">
+    <div class="file-field input-field">
+      <div class="waves-effect btn indigo lighten-1">
+        <span>File</span>
+        <input type="file" name='image' multiple>
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text" placeholder="Upload your cover photo">
+      </div>
+    </div>
+    <button class="waves-effect btn indigo lighten-1">Signup</button>
+  </form>
+</div>

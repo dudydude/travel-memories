@@ -1,0 +1,15 @@
+<h1>It works</h1>
+<p>{{day}}</p>
+
+<ul>
+    {{#each day.photo}}
+    <li><img src="{{this.photo.url}}" /></li>
+    {{/each}}
+</ul>
+{{#if creator}}
+<a href="/trip/{{day.trip}}/{{day._id}}/delete">Delete this day</a>
+<a href="/trip/{{day.trip}}/{{day._id}}/edit">Edit this day</a>
+{{else}}
+<p> not creator</p>
+<a href="/{{day.trip}}">Retour à la page trip</a>
+{{/if}}

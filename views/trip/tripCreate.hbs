@@ -1,0 +1,33 @@
+<div class="container form z-depth-2">
+
+    <div class="header-form">
+        <h3> Create your trip </h3>
+    </div>
+
+    <form method="POST" action="/trip/create-trip" enctype="multipart/form-data">
+        <div class="input-field col s6">
+            <input id="first_name2" type="text" class="validate" name="name">
+            <label class="active" for="first_name2">Name of your trip </label>
+        </div>
+        <br>
+
+        <div class="input-field col s12">
+            <textarea id="textarea1" class="materialize-textarea" name="description"></textarea>
+            <label for="textarea1">Describe your trip</label>
+        </div>
+        <br>
+
+        <div class="file-field input-field">
+            <div class="waves-effect btn indigo lighten-1">
+                <span>File</span>
+                <input type="file" name='image'>
+            </div>
+            <div class="file-path-wrapper">
+                <input class="file-path validate" type="text" placeholder="Upload your cover photo">
+            </div>
+        </div>
+        <br>
+        <button class="waves-effect btn indigo lighten-1" href="/dashboard">Submit your form</button>
+    </form>
+
+</div>

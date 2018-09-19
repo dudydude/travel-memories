@@ -1,2 +1,48 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+{{!-- NAVBAR qui détecte et affiche différement si le user est co vs not co --}}
+{{!-- <ul class="nav navbar-nav">
+    {{#if user}}
+    <li>
+        <p class="navbar-text">
+            <strong>Hi,</strong>
+
+            {{user.username}}
+        </p>
+    </li>
+
+    <li>
+        <a href="/dashboard">Dashboard</a>
+    </li>
+    <li>
+        <a href="/logout">Log Out</a>
+    </li>
+</ul>
+
+{{else}}
+<a class="waves-effect waves-light btn-large" href="/login">Login</a>
+<a class="waves-effect waves-light btn-large" href="/signup">Sign up</a>
+
+{{/if}} --}}
+<header>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">Logo</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/signup">Sign Up</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<div id="home">
+    <h1 id="home-title">Welcome,
+        <br> to your new travel app</h1>
+</div>
+
+<div id="bloc-hp-1">Explication 1</div>
+<div id="bloc-hp-2">Explication 2</div>
+
+
+{{!-- HOME --}}
